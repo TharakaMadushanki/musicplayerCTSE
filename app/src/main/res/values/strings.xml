@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Music Player</string>
+    <string name="drawer_allmusic_title">All Music</string>
+    <string name="drawer_playlists_title">Playlists</string>
+    <string name="drawer_favorites_title">Fsvorites</string>
+    <string name="drawer_settings_title">Settings</string>
+    <string name="media_route_menu_title">Play on…</string>
+    <string name="nav_header_username">Username</string>
+    <string name="currently_playing_song">Song currently playing</string>
+    <string name="currently_playing_artist">Artist of currently playing song</string>
+    <string name="play_pause">Play or Pause</string>
+    <string name="artist_of_currently_playing_song">Artist of currently playing song</string>
+    <string name="song_currently_playing">Song currently playing</string>
+    <string name="background_image_str">Background image for album art</string>
+    <string name="skip_next">skip to next</string>
+    <string name="skip_prev">skip to previous</string>
+
+</resources>
