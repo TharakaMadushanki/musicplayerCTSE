@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.nav_header);
+        setContentView(R.layout.activity_main);
 
         songListView = (ListView) findViewById(R.id.song_list);
         arrayList = new ArrayList<>();
@@ -27,5 +27,9 @@ public class MainActivity extends AppCompatActivity {
         arrayList.add(new MusicHandler("Ran Meevitha", "Amal Perera", R.raw.ranmeevitha));
         arrayList.add(new MusicHandler("Sanda Midulata Enawa", "Amal Perera Cover", R.raw.sandamidulataenawa));
 
+
+        Madapter = new CustomMusicAdapter(this, R.layout.media_list_item, arrayList);
+        songListView.setAdapter(Madapter);
     }
+
 }
