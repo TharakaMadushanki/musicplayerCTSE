@@ -64,8 +64,8 @@ public class CustomMusicAdapter extends BaseAdapter {
             convertView = layoutinflater.inflate(layout, null);
             viewholder.txtName = (TextView) convertView.findViewById(R.id.song_title);
             viewholder.txtSinger = (TextView) convertView.findViewById(R.id.artist_name);
-//            viewholder.imageViewPlay = (ImageView) convertView.findViewById(R.id.imageViewPlay);
-//            viewholder.imageViewStop = (ImageView) convertView.findViewById(R.id.imageViewStop);
+            viewholder.imageViewPlay = (ImageView) convertView.findViewById(R.id.play_eq);
+            //viewholder.imageViewStop = (ImageView) convertView.findViewById(R.id.imageViewStop);
 
             convertView.setTag(viewholder);
         } else {
@@ -78,8 +78,8 @@ public class CustomMusicAdapter extends BaseAdapter {
         viewholder.txtSinger.setText(music.getSinger());
 
         // play music
-//        viewholder.imageViewPlay.setOnClickListener(new View.OnClickListener() {
-            /*@Override
+        viewholder.imageViewPlay.setOnClickListener(new View.OnClickListener() {
+            @Override
             public void onClick(View view) {
                 Log.i("from On click", "flag : " + flag + " isPuased : " + isPaused);
                 if (flag && !isPaused) {
@@ -87,15 +87,15 @@ public class CustomMusicAdapter extends BaseAdapter {
                     flag = false;
                     mediaplayer.setVolume(50, 50);
                     mediaplayer.start();
-                    viewholder.imageViewPlay.setImageResource(R.drawable.pause);
+                    viewholder.imageViewPlay.setImageResource(R.drawable.ic_pause_black_36dp);
                 } else {
                     if (isPaused) {
                         mediaplayer.start();
-                        viewholder.imageViewPlay.setImageResource(R.drawable.pause);
+                        viewholder.imageViewPlay.setImageResource(R.drawable.ic_pause_black_36dp);
                         isPaused = false;
                     } else {
                         mediaplayer.pause();
-                        viewholder.imageViewPlay.setImageResource(R.drawable.play);
+                        viewholder.imageViewPlay.setImageResource(R.drawable.ic_play_arrow_black_36dp);
                         isPaused = true;
                     }
                 }
@@ -103,18 +103,18 @@ public class CustomMusicAdapter extends BaseAdapter {
             }
         }) ;
 
-        viewholder.imageViewStop.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (!flag) {
-                    mediaplayer.stop();
-                    mediaplayer.release();
-                    flag = true;
-                    viewholder.imageViewPlay.setImageResource(R.drawable.play);
-                }
-
-            }
-        });*/
+//        viewholder.imageViewStop.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                if (!flag) {
+//                    mediaplayer.stop();
+//                    mediaplayer.release();
+//                    flag = true;
+//                    //viewholder.imageViewPlay.setImageResource(R.drawable.play);
+//                }
+//
+//            }
+//        });
         return convertView;
     }
 }
