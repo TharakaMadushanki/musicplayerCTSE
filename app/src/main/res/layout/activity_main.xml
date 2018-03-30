@@ -1,14 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schem as.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-tools:context="com.sliit.tharaka.mymusicplayer.MainActivity">
-
-<ListView
-    android:id="@+id/song-list"
+    xmlns:app="http://schem as.android.com/apk/res-auto"
+    xmlns:app2="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" />
+    android:layout_height="match_parent"
+    tools:context="com.sliit.tharaka.mymusicplayer.MainActivity">
+
+    <ListView
+        android:id="@+id/song-list"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app2:layout_constraintBottom_toTopOf="@+id/media_playback_controls"
+        app2:layout_constraintEnd_toEndOf="parent"
+        app2:layout_constraintStart_toStartOf="parent"
+        app2:layout_constraintTop_toTopOf="parent" />
+
+    <fragment
+        android:id="@+id/media_playback_controls"
+        android:name="com.sliit.tharaka.mymusicplayer.UI.playBackFragment"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app2:layout_constraintBottom_toBottomOf="parent"
+        app2:layout_constraintEnd_toEndOf="parent"
+        app2:layout_constraintStart_toStartOf="parent"
+        app2:layout_constraintTop_toBottomOf="@+id/song-list"
+        tools:layout="@layout/media_playback_controls" />
+
 
 </android.support.constraint.ConstraintLayout>
